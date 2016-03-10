@@ -3,23 +3,23 @@
     <div class="nav-wrapper container">{{#linkTo route='home' class='brand-logo'}}Blog test{{/linkTo}}
       <ul class="right hide-on-med-and-down">
         <li>
-          {{#linkTo route='newPost'}}
+          {{#linkTo route='newPost' class='js-new-post'}}
           New Post
           {{/linkTo}}
         </li>
         <li>
-          Login/logout
+          {{> atNavButton}}
         </li>
       </ul>
 
       <ul class="side-nav" id="nav-mobile" style="left: -250px;">
         <li>
-          {{#linkTo route='newPost'}}
+          {{#linkTo route='newPost' class='js-new-post'}}
           New Post
           {{/linkTo}}
         </li>
         <li>
-          Login/logout
+          {{> atNavButton}}
         </li>
       </ul>
       <a class="button-collapse" data-activates="nav-mobile" href="#"><i class="material-icons">menu</i></a>
