@@ -1,4 +1,8 @@
 <template name="postPage">
 	<h2>{{title}}</h2>
 	<p>{{body}}</p>
+	{{#if likes }}
+		<div class="chip">{{likes}} Likes</div>
+	{{/if}}
+	<a href="#" class="btn btn-default js-like-post">Like</a>
 </template>
