@@ -1,3 +1,13 @@
+Template.postPage.helpers({
+    canDelete: function () {
+        if (Meteor.user()) {
+            if (Meteor.user()._id == this.userId) {
+                return true;
+            }
+        }
+    }
+});
+
 Template.postPage.events({
     "click .js-like-post": function (event) {
         event.preventDefault();
@@ -23,5 +33,20 @@ Template.postPage.events({
                 });
             }
         }
+    },
+    "click .js-delete-post": function (event) {
+        var postId = this._id;
+        MaterializeModal.confirm({
+          title: "Do you want to delete this post?",
+          label: "Delete?",
+          message: "",
+          callback: function(error, response) {
+            if (response.submit) {
+                Meteor.call("deletePost", postId);
+                    Router.go('/');
+                    Materialize.toast("Post deleted!", 5000, "green");
+            }
+          }
+        });
     }
 });

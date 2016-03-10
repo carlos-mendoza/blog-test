@@ -5,4 +5,7 @@
 		<div class="chip">{{likes}} Likes</div>
 	{{/if}}
 	<a href="#" class="btn btn-default js-like-post">Like</a>
+	{{#if canDelete }}
+		<a href="#" class="btn btn-default js-delete-post">Delete</a>
+	{{/if}}
 </template>
