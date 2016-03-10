@@ -3,7 +3,9 @@
     <div class="nav-wrapper container">{{#linkTo route='home' class='brand-logo'}}Blog test{{/linkTo}}
       <ul class="right hide-on-med-and-down">
         <li>
+          {{#linkTo route='newPost'}}
           New Post
+          {{/linkTo}}
         </li>
         <li>
           Login/logout
@@ -12,7 +14,9 @@
 
       <ul class="side-nav" id="nav-mobile" style="left: -250px;">
         <li>
+          {{#linkTo route='newPost'}}
           New Post
+          {{/linkTo}}
         </li>
         <li>
           Login/logout

@@ -1,3 +1,8 @@
 <template name="postsList">
-Post List
+	{{#each posts}}
+		<div class="divider"></div>
+		<div class="section">
+			{{> postItem}}
+		</div>
+	{{/each}}
 </template>
