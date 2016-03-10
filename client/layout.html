@@ -1,0 +1,11 @@
+<template name="masterLayout">
+	<div id="content">
+	{{> yield region='nav'}}
+	<div class="section no-pad-bot">
+		<div class="container">
+		    {{> yield}}
+		</div>
+	</div>
+  </div>
+  {{> yield region='footer'}}
+</template>

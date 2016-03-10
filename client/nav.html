@@ -1,0 +1,24 @@
+<template name="nav">
+  <nav role="navigation" class="light-blue lighten-1">
+    <div class="nav-wrapper container">{{#linkTo route='home' class='brand-logo'}}Blog test{{/linkTo}}
+      <ul class="right hide-on-med-and-down">
+        <li>
+          New Post
+        </li>
+        <li>
+          Login/logout
+        </li>
+      </ul>
+
+      <ul class="side-nav" id="nav-mobile" style="left: -250px;">
+        <li>
+          New Post
+        </li>
+        <li>
+          Login/logout
+        </li>
+      </ul>
+      <a class="button-collapse" data-activates="nav-mobile" href="#"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</template>
